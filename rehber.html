@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BF Akış Kullanım Rehberi — Görev, Alarm, Odak Modu ve Ayarlar</title>
+<meta name="description" content="BF Akış uygulamasının tüm özelliklerinin adım adım anlatımı: görev ekleme, tekrar kuralları, alarmlar, odak modu, listeler, istatistikler ve yedekleme.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3839620878292672" crossorigin="anonymous"></script>
+<style>
+:root{--bg:#0A0A0C;--surface:#15151B;--surface2:#1D1D25;--line:#2A2A32;
+--text:#EDEAE2;--dim:#9A9AA3;--gold:#C9A227;--gold-b:#E2BD4E;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--text);
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+line-height:1.75;font-size:17px;}
+a{color:var(--gold-b);}
+header{border-bottom:1px solid var(--line);background:rgba(10,10,12,.95);
+position:sticky;top:0;backdrop-filter:blur(8px);z-index:10;}
+.bar{max-width:860px;margin:0 auto;padding:14px 20px;display:flex;
+align-items:center;gap:20px;flex-wrap:wrap;}
+.brand{font-weight:800;font-size:20px;letter-spacing:.02em;text-decoration:none;color:var(--text);}
+.brand span{color:var(--gold);}
+nav{display:flex;gap:16px;flex-wrap:wrap;font-size:15px;}
+nav a{color:var(--dim);text-decoration:none;}
+nav a:hover,nav a.on{color:var(--gold);}
+main{max-width:860px;margin:0 auto;padding:34px 20px 60px;}
+h1{font-size:34px;line-height:1.25;margin:.2em 0 .5em;}
+h2{font-size:24px;margin:1.9em 0 .5em;color:var(--gold-b);}
+h3{font-size:19px;margin:1.5em 0 .4em;}
+p,li{color:#DCD8CE;}
+ul,ol{padding-left:22px;}
+li{margin:.4em 0;}
+.lead{font-size:19px;color:var(--dim);}
+.card{background:var(--surface);border:1px solid var(--line);
+border-radius:16px;padding:22px 24px;margin:18px 0;}
+.card h3{margin-top:0;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;}
+.btn{display:inline-block;background:var(--gold);color:#000;font-weight:700;
+padding:13px 28px;border-radius:40px;text-decoration:none;margin-top:8px;}
+.meta{color:#7C7C85;font-size:14px;margin-bottom:22px;}
+footer{border-top:1px solid var(--line);margin-top:40px;}
+.foot{max-width:860px;margin:0 auto;padding:26px 20px;color:#7C7C85;font-size:14px;
+display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between;}
+.foot a{color:#9A9AA3;text-decoration:none;margin-right:14px;}
+blockquote{border-left:3px solid var(--gold);margin:1.4em 0;padding:.2em 0 .2em 18px;color:var(--dim);}
+table{width:100%;border-collapse:collapse;margin:1.2em 0;font-size:16px;}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;}
+th{background:var(--surface2);color:var(--gold-b);}
+</style>
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="index.html">BF <span>AKIŞ</span></a>
+  <nav><a href="index.html">Ana Sayfa</a><a href="rehber.html" class="on">Kullanım Rehberi</a><a href="blog.html">Yazılar</a><a href="hakkinda.html">Hakkında</a><a href="iletisim.html">İletişim</a></nav>
+</div></header>
+<main>
+
+<h1>Kullanım Rehberi</h1>
+<p class="lead">Bu sayfa, BF Akış'ın tüm özelliklerini sırayla anlatır. Uygulamayı yeni
+kurduysan baştan okumak on dakikanı alır; belirli bir konu arıyorsan başlıklardan
+ilerleyebilirsin.</p>
+
+<h2>1. Hesap oluşturma</h2>
+<p>Uygulama ilk açıldığında bir kilit ekranı karşılar. "Kayıt ol" sekmesinden bir
+kullanıcı adı, görünen ad ve sayısal bir şifre belirlersin. Bu bilgiler
+<strong>yalnızca cihazında</strong> saklanır; hiçbir sunucuya gönderilmez. Şifreni
+unutursan diye kayıt sırasında bir güvenlik sorusu seçmen istenir — cevabını
+unutmayacağın bir soru seç, çünkü şifre sıfırlamanın tek yolu budur.</p>
+<p>Kaydolduktan sonra ülke ve dil seçimi yapılır. Ülke seçimi, takvimdeki resmi
+tatilleri ve sana önerilecek hazır görev şablonlarını belirler.</p>
+
+<h2>2. Görev eklemek</h2>
+<p>Ana ekranın sağ altındaki <strong>+</strong> düğmesi görev ekleme ekranını açar.
+Burada doldurabileceğin alanlar:</p>
+<ul>
+  <li><strong>Görev adı</strong> — en fazla 60 karakter.</li>
+  <li><strong>Saat</strong> — dokununca kaydırmalı bir saat seçici açılır. Görevin
+  saati yoksa "Saatsiz" anahtarını açabilirsin; saatsiz görevler listenin üstünde durur.</li>
+  <li><strong>Tarih</strong> — boş bırakırsan görev bugüne aittir. İleri bir tarih
+  verirsen o güne planlanır ve "Yaklaşan" bölümünde görünür.</li>
+  <li><strong>Öncelik</strong> — işaretlenen görevler listede renkli bir noktayla ayrılır.</li>
+  <li><strong>Alarm</strong> — aşağıda ayrıntılı anlatılıyor.</li>
+  <li><strong>Zorluk</strong> — Kolay, Orta veya Zor. Tamamlandığında kazanacağın
+  puanı belirler (sırasıyla 5, 10, 20 XP).</li>
+  <li><strong>Tekrar</strong> — aşağıdaki tabloya bakabilirsin.</li>
+  <li><strong>Alt görevler</strong> — bir görevin içine küçük adımlar ekleyip tek tek
+  işaretleyebilirsin.</li>
+</ul>
+
+<h3>Tekrar seçenekleri</h3>
+<table>
+  <tr><th>Seçenek</th><th>Anlamı</th></tr>
+  <tr><td>Tek seferlik</td><td>Yalnızca eklendiği gün görünür, tamamlanınca ertesi gün listeden kalkar.</td></tr>
+  <tr><td>Her gün</td><td>Her sabah yeniden "tamamlanmadı" durumuna döner.</td></tr>
+  <tr><td>Hafta içi</td><td>Pazartesi–Cuma günleri görünür.</td></tr>
+  <tr><td>Haftanın günü</td><td>Seçtiğin tek güne özel (ör. her Salı).</td></tr>
+  <tr><td>Ayın günü</td><td>Her ayın belirli günü (ör. her ayın 5'i). Kısa aylarda ayın son gününe kayar.</td></tr>
+  <tr><td>İki haftada bir</td><td>Çift veya tek hafta numarasına göre, seçtiğin günde.</td></tr>
+</table>
+
+<h3>Hızlı ekleme ve sesle ekleme</h3>
+<p>Liste başındaki kutuya görev adını yazıp Enter'a basarak da hızlıca görev
+ekleyebilirsin. Yanındaki mikrofon simgesiyle sesle söyleyerek eklemek de mümkün.</p>
+
+<h2>3. Bildirimler ve alarmlar</h2>
+<p>İki farklı hatırlatma katmanı var ve karıştırılmaları yaygın:</p>
+<h3>Bildirimler (varsayılan)</h3>
+<p>Saati olan <em>her</em> görev otomatik olarak bildirim alır. Ayarlar'dan kaç dakika
+önceden uyarılmak istediğini seçersin (5, 10, 15 veya 30 dakika). Bildirim geldiğinde
+"Ertele" ile 10 dakika sonraya atabilirsin. Ayrıca her Pazar akşamı, o haftanın
+dakiklik özeti bildirim olarak gelir.</p>
+<h3>Alarm (isteğe bağlı)</h3>
+<p>Görev eklerken "Alarm" anahtarını açarsan o görev sıradan bildirim yerine gerçek bir
+alarm kurar. Alarm saati geldiğinde uygulama kapalı olsa bile telefon uyanır, ekran
+açılır ve seçtiğin ses rahatsız etme modunu aşarak çalar.</p>
+<p>Alarm çaldığında iki seçeneğin olur: <strong>Kapat</strong> veya <strong>Ertele</strong>.
+Erteleme süresini alarm ekranındaki 5/10/15/30 seçeneklerinden ya da Ayarlar'daki
+"Alarm erteleme süresi" satırından belirlersin. Telefonun ses tuşlarına basmak da
+alarmı erteler — kapatmaz; bu, yanlışlıkla alarmı susturup uyanamamayı önler.</p>
+<p>Alarm sesini Ayarlar → "Alarm Sesi" bölümünden değiştirebilirsin: Klasik, Retro Zil,
+Dijital, Çalar Saat ve Siren seçeneklerinden birine dokunduğunda önizlemesi çalar.</p>
+
+<h3>Alarm çalmıyorsa</h3>
+<p>Bazı telefonlar (özellikle Xiaomi, Huawei, Oppo ve Samsung'un bazı modelleri) pil
+tasarrufu için arka plandaki uygulamaları kısıtlar. Uygulama ilk kurulumda gerekli
+izinleri ister; reddettiysen şunları elle açman gerekir: <em>tam zamanlı alarm izni</em>,
+<em>pil optimizasyonundan muaf tutma</em>, <em>tam ekran bildirim izni</em> ve
+Xiaomi cihazlarda <em>otomatik başlatma</em>.</p>
+
+<h2>4. Odak modu</h2>
+<p>Ana ekrandaki hızlı araçlardan odak modunu açarsın. Süreyi seçersin (15, 25, 45 veya
+60 dakika), istersen üzerinde çalışacağın görevi listeden işaretlersin ve başlatırsın.
+Sayaç çalışırken bildirim alanında canlı bir ilerleme göstergesi durur — uygulamadan
+çıksan bile kalan süreyi görürsün.</p>
+<p>Oturum bitince kısa mola gelir; dört oturumun ardından uzun mola. Her tamamlanan
+oturum 20 XP kazandırır ve seçtiğin görev otomatik olarak tamamlandı işaretlenir.
+Molayı ya da oturumu atlarsan puan verilmez — sayaç sadece ilerler.</p>
+
+<h2>5. Listeler</h2>
+<p>Ana ekranın üstündeki "Listeler" sekmesi, güne bağlı olmayan kontrol listeleri
+içindir: market alışverişi, tatil hazırlığı, okul malzemeleri gibi. İstediğin kadar
+liste oluşturur, her birine emoji ve renk atarsın. Liste öğeleri tamamlandıkça üstteki
+ilerleme çubuğu dolar.</p>
+
+<h2>6. İstatistikler, rütbe ve seri</h2>
+<p>Profil sekmesindeki sayılar gerçek kullanım verinden hesaplanır:</p>
+<ul>
+  <li><strong>Dakiklik oranı</strong> — o ay tamamladığın görevlerin oranı.</li>
+  <li><strong>Haftalık grafik</strong> — son yedi günün karşılaştırması.</li>
+  <li><strong>Ay karşılaştırması</strong> — bu ayın geçen aya göre farkı.</li>
+  <li><strong>XP ve rütbe</strong> — Çaylak'tan Efsane'ye altı kademe.</li>
+  <li><strong>Seri</strong> — üst üste en az bir görev tamamladığın gün sayısı.</li>
+</ul>
+<p>Bir günü tamamen kaçırırsan seri sıfırlanır. Ancak her 7 günlük seri sana bir
+<em>koruma hakkı</em> kazandırır; kaçırdığın gün varsa bu hak otomatik olarak harcanır
+ve serin korunur. En fazla üç hak biriktirebilirsin.</p>
+
+<h2>7. Yedekleme ve dışa aktarma</h2>
+<p>Profil sekmesindeki araçlarla verilerini taşıyabilirsin:</p>
+<ul>
+  <li><strong>Verilerimi indir</strong> — görevler, geçmiş, listeler, rütbe ve ayarları
+  içeren bir JSON dosyası oluşturur. Aynı dosyayı "İçe aktar" ile geri yükleyebilirsin.</li>
+  <li><strong>Takvime ekle</strong> — görevlerini .ics dosyası olarak dışa aktarır;
+  Google Takvim, Apple Takvim ve Outlook bu dosyayı okuyabilir. Tekrarlı görevler
+  doğru tekrar kuralıyla aktarılır.</li>
+  <li><strong>Gün kartı</strong> — o günün özetini görsel bir kart olarak kaydeder,
+  paylaşabilirsin.</li>
+</ul>
+
+<h2>8. BF Asistan</h2>
+<p>Ana ekrandaki yıldız simgesi, yazarak veya konuşarak komut verebileceğin asistanı
+açar. Tamamen cihazda çalışır, internete bağlanmaz. Anladığı komutlardan bazıları:</p>
+<ul>
+  <li>"yarın 9'a alarm kur"</li>
+  <li>"market alışverişi bugün saat 18.30"</li>
+  <li>"sporu tamamla" / "toplantıyı sil"</li>
+  <li>"temayı mavi yap" / "arka planı asil yap"</li>
+  <li>"bu ay nasıl gidiyorum?" / "serim kaç gün?"</li>
+  <li>"odak modu aç" / "takvimi aç"</li>
+</ul>
+<p>Anlamadığı bir şey söylersen sana ne demek istediğini sorar ve öğrendiğini bir daha
+unutmaz. Kural tabanlı bir motor olduğu için serbest sohbet edemez; komutlara ve
+uygulama hakkındaki sorulara cevap verir.</p>
+
+<h2>9. Gizlilik</h2>
+<p>Uygulama hesap, görev ve istatistik verilerini yalnızca cihazda saklar. Şifreler
+PBKDF2 ile korunur. İstersen biyometrik kilidi açarak girişe parmak izi/yüz tanıma
+şartı ekleyebilirsin. Ayrıntılar için <a href="privacy.html">gizlilik politikasına</a>
+bakabilirsin.</p>
+
+</main>
+<footer><div class="foot">
+  <div>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="rehber.html">Rehber</a>
+    <a href="blog.html">Yazılar</a>
+    <a href="hakkinda.html">Hakkında</a>
+    <a href="iletisim.html">İletişim</a>
+    <a href="privacy.html">Gizlilik Politikası</a>
+  </div>
+  <div>© 2026 BF Akış</div>
+</div></footer>
+</body>
+</html>

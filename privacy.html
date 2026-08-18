@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gizlilik Politikası — BF Akış</title>
+<style>
+  :root{
+    --bg:#0A0A0C; --surface:#15151B; --surface2:#1C1C24; --text:#EDEAE2; --text-dim:#86868F;
+    --line:#26262E; --gold:#C9A227; --gold-bright:#E2BD4E; --red:#9C3B2E;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    line-height:1.7; font-size:15px;
+  }
+  .wrap{ max-width:680px; margin:0 auto; padding:48px 24px 80px; }
+  .brand{ display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+  .brand-mark{ font-family:Georgia,serif; font-weight:700; font-size:22px; color:var(--gold); }
+  .brand-name{ font-weight:600; letter-spacing:1px; color:var(--text-dim); font-size:13px; }
+  h1{ font-family:'Oswald',Georgia,sans-serif; font-size:26px; font-weight:600; margin:18px 0 4px; color:var(--text); }
+  .updated{ font-size:12.5px; color:var(--text-dim); margin-bottom:6px; }
+  .lang-note{ font-size:12px; color:var(--text-dim); background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:10px 14px; margin:18px 0 28px; }
+  h2{ font-family:'Oswald',Georgia,sans-serif; font-size:17px; font-weight:600; color:var(--gold-bright); margin:32px 0 8px; }
+  p{ color:#C7C4BC; margin:0 0 12px; }
+  ul{ color:#C7C4BC; margin:0 0 12px; padding-left:20px; }
+  li{ margin-bottom:6px; }
+  strong{ color:var(--text); }
+  table{ width:100%; border-collapse:collapse; margin:14px 0; font-size:13.5px; }
+  th,td{ text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); color:#C7C4BC; vertical-align:top; }
+  th{ color:var(--text); font-weight:600; }
+  a{ color:var(--gold-bright); text-decoration:underline; }
+  .badge{ display:inline-block; font-size:11px; font-weight:600; letter-spacing:.5px; padding:3px 9px; border-radius:20px; border:1px solid rgba(201,162,39,0.4); color:var(--gold-bright); margin-right:6px; }
+  .footer-note{ margin-top:48px; padding-top:20px; border-top:1px solid var(--line); font-size:12px; color:var(--text-dim); }
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3839620878292672" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="brand"><span class="brand-mark">BF</span><span class="brand-name">ORDNUNG</span></div>
+  <h1>Gizlilik Politikası</h1>
+  <div class="updated">Son güncelleme: 25 Haziran 2026</div>
+
+  <div class="lang-note">
+    Bu sayfa şu anda Türkçe olarak yayınlanmıştır. Uygulama içi arayüz Türkçe, Almanca ve İngilizce
+    dillerini desteklemektedir; bu politika metninin diğer dillere çevirisi talep üzerine sağlanabilir.
+  </div>
+
+  <p>
+    BF Akış ("uygulama", "biz"), kişisel görev ve gün planlama amacıyla kullanılan bir mobil/web
+    uygulamasıdır. Bu sayfa, uygulamayı kullanırken hangi bilgilerin toplandığını, nasıl saklandığını
+    ve hangi haklara sahip olduğunuzu açıklar.
+  </p>
+
+  <h2>1. Topladığımız Veriler</h2>
+  <table>
+    <tr><th>Veri Türü</th><th>Açıklama</th><th>Saklama Şekli</th></tr>
+    <tr><td><strong>Hesap bilgileri</strong></td><td>Kullanıcı adı, görünen ad, şifre</td><td>Yalnızca bu cihazda yerel olarak saklanır. Şifre tek yönlü, tuzlanmış (salted) SHA-256 özeti olarak saklanır — düz metin olarak hiçbir zaman tutulmaz.</td></tr>
+    <tr><td><strong>Kurtarma sorusu</strong></td><td>Şifre sıfırlama için seçtiğiniz güvenlik sorusu ve cevabı</td><td>Yalnızca bu cihazda yerel olarak saklanır. Cevap, şifreyle aynı şekilde tuzlanmış özet olarak saklanır.</td></tr>
+    <tr><td><strong>Görev verileri</strong></td><td>Eklediğiniz görevler, alt görevler, tamamlanma durumu, geçmiş istatistikler</td><td>Yalnızca kullandığınız cihazda yerel olarak saklanır.</td></tr>
+    <tr><td><strong>Zaman kapsülleri</strong></td><td>Gelecekteki kendinize yazdığınız notlar ve açılış tarihleri</td><td>Yalnızca cihazda yerel olarak saklanır.</td></tr>
+    <tr><td><strong>Biyometrik kimlik doğrulama</strong></td><td>Face ID / Touch ID açtıysanız, cihazınızın WebAuthn kimlik bilgisi referansı</td><td>Yalnızca cihazda saklanır; biyometrik verinizin kendisi (yüz/parmak izi) bize hiçbir zaman ulaşmaz, bu işlemi tamamen işletim sisteminiz yürütür.</td></tr>
+    <tr><td><strong>Tercihler</strong></td><td>Dil, tema, bildirim ayarları, ülke seçimi</td><td>Yalnızca cihazda yerel olarak saklanır.</td></tr>
+  </table>
+
+  <p>
+    <span class="badge">ÖNEMLİ</span>
+    Bu uygulama tamamen <strong>cihaza özeldir</strong>. Hesabınız dahil olmak üzere — kullanıcı adınız,
+    şifre özetiniz, kurtarma sorunuz, görevleriniz, geçmişiniz ve zaman kapsülleriniz —
+    <strong>hiçbir veri herhangi bir sunucuya gönderilmez veya bizim ya da üçüncü bir tarafın
+    erişebileceği bir yerde saklanmaz.</strong> Her şey yalnızca telefonunuzun/tarayıcınızın
+    kendi yerel deposunda kalır.
+  </p>
+  <p>
+    Bunun pratik sonucu: <strong>hesabınız başka bir cihaza veya tarayıcıya taşınmaz.</strong>
+    Telefon değiştirirseniz, uygulamayı silip yeniden kurarsanız veya farklı bir tarayıcıdan
+    girmeye çalışırsanız, aynı hesaba erişemezsiniz — yeniden kayıt olmanız gerekir. "Şifremi
+    Unuttum" özelliği de bu yüzden yalnızca hesabı oluşturduğunuz <strong>aynı cihazda</strong> çalışır.
+    Görev ve geçmiş verinizi yeni bir cihaza taşımak isterseniz, uygulama içindeki "Verilerimi
+    Dışa Aktar / İçe Aktar" özelliğini elle kullanabilirsiniz.
+  </p>
+
+  <h2>2. Cihaz Özellikleri ve İzinler</h2>
+  <p>Uygulama, açıkça izin verdiğiniz durumlarda aşağıdaki cihaz özelliklerine erişebilir:</p>
+  <ul>
+    <li><strong>Bildirimler:</strong> Görev hatırlatmaları göndermek için, izninizle.</li>
+    <li><strong>Mikrofon ve konuşma tanıma:</strong> Sesle görev eklemek istediğinizde, sadece o anlık kullanım için. Ses kaydı cihazınızda işlenir veya işletim sisteminizin konuşma tanıma servisine gönderilir; bizim sunucularımıza kaydedilmez.</li>
+    <li><strong>Pil durumu:</strong> Uygulama içindeki asistana "şarj durumu nedir" diye sorduğunuzda, cihazınızın o anki şarj yüzdesini okumak için (tarayıcı/işletim sistemi destekliyorsa).</li>
+    <li><strong>Biyometrik kimlik doğrulama:</strong> Face ID / Touch ID ile giriş özelliğini açtıysanız.</li>
+  </ul>
+
+  <h2>3. Üçüncü Taraf Servisler</h2>
+  <p>
+    Takvim bölümündeki resmi tatil günleri, ücretsiz bir kamu API'si olan
+    <a href="https://date.nager.at" target="_blank" rel="noopener">Nager.Date</a>'den çekilir.
+    Bu istek sırasında sadece seçtiğiniz ülke kodu ve yıl gönderilir; kişisel hiçbir bilginiz
+    bu servise iletilmez.
+  </p>
+
+  <h2>4. Verileriniz Üzerindeki Haklarınız</h2>
+  <ul>
+    <li><strong>Erişim ve taşınabilirlik:</strong> Ayarlar → Veri → "Verilerimi Dışa Aktar" ile tüm görev ve geçmiş verinizi JSON dosyası olarak indirebilirsiniz.</li>
+    <li><strong>Düzeltme:</strong> Görevlerinizi ve profil bilgilerinizi uygulama içinden istediğiniz zaman düzenleyebilirsiniz.</li>
+    <li><strong>Silme:</strong> Ayarlar → Hesap → "Hesabı Sil" ile hesabınızı ve tüm ilişkili verilerinizi kalıcı olarak silebilirsiniz. Bu işlem geri alınamaz.</li>
+  </ul>
+
+  <h2>5. Verilerin Satışı ve Reklam</h2>
+  <p>
+    Verileriniz hiçbir üçüncü tarafa satılmaz, reklam amacıyla kullanılmaz veya pazarlama
+    şirketleriyle paylaşılmaz. Uygulama içinde reklam bulunmamaktadır.
+  </p>
+
+  <h2>6. Çocukların Gizliliği</h2>
+  <p>
+    BF Akış, 13 yaş altı çocuklardan bilerek kişisel veri toplamamayı hedefler. Uygulamanın
+    13 yaş altı kullanıcılar için tasarlanmadığını fark ederseniz lütfen bizimle iletişime geçin.
+  </p>
+
+  <h2>7. Bu Politikadaki Değişiklikler</h2>
+  <p>
+    Uygulamaya yeni özellikler eklendiğinde bu politika güncellenebilir. Önemli değişiklikler
+    bu sayfanın üstündeki "son güncelleme" tarihine yansıtılır.
+  </p>
+
+  <h2>8. İletişim</h2>
+  <p>
+    Bu politikayla ilgili sorularınız için: <strong>fy66778@gmail.com</strong>
+  </p>
+
+  <div class="footer-note">
+    Bu metin bir taslak olup hukuki tavsiye niteliği taşımaz. Mağazalara göndermeden önce
+    kendi ülkenizdeki mevzuata (KVKK, GDPR/DSGVO vb.) uygunluk için bir hukuk uzmanına
+    danışmanız ve iletişim e-postasını doldurmanız önerilir.
+  </div>
+
+</div>
+</body>
+</html>

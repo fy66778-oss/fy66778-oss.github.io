@@ -3,23 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BF Akış — Günlük Planlayıcı</title>
+<title>BF Akış — Günlük Planlayıcı, Alarm ve Odak Uygulaması</title>
+<meta name="description" content="BF Akış; günlük görevlerini saat saat planlaman, alarmla hatırlatman ve odaklanarak tamamlaman için tasarlanmış, tamamen çevrimdışı çalışan bir Android uygulaması.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3839620878292672" crossorigin="anonymous"></script>
 <style>
-  body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:#0A0A0C;color:#EDEAE2;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;}
-  .wrap{padding:40px 24px;max-width:520px;}
-  h1{font-size:2rem;margin:0 0 8px;}
-  h1 span{color:#C9A227;}
-  p{color:#86868F;line-height:1.6;}
-  a.btn{display:inline-block;margin-top:18px;background:#C9A227;color:#000;font-weight:700;padding:14px 32px;border-radius:40px;text-decoration:none;}
-  a.link{display:block;margin-top:22px;color:#C9A227;text-decoration:none;font-size:.9rem;}
+:root{--bg:#0A0A0C;--surface:#15151B;--surface2:#1D1D25;--line:#2A2A32;
+--text:#EDEAE2;--dim:#9A9AA3;--gold:#C9A227;--gold-b:#E2BD4E;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--text);
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+line-height:1.75;font-size:17px;}
+a{color:var(--gold-b);}
+header{border-bottom:1px solid var(--line);background:rgba(10,10,12,.95);
+position:sticky;top:0;backdrop-filter:blur(8px);z-index:10;}
+.bar{max-width:860px;margin:0 auto;padding:14px 20px;display:flex;
+align-items:center;gap:20px;flex-wrap:wrap;}
+.brand{font-weight:800;font-size:20px;letter-spacing:.02em;text-decoration:none;color:var(--text);}
+.brand span{color:var(--gold);}
+nav{display:flex;gap:16px;flex-wrap:wrap;font-size:15px;}
+nav a{color:var(--dim);text-decoration:none;}
+nav a:hover,nav a.on{color:var(--gold);}
+main{max-width:860px;margin:0 auto;padding:34px 20px 60px;}
+h1{font-size:34px;line-height:1.25;margin:.2em 0 .5em;}
+h2{font-size:24px;margin:1.9em 0 .5em;color:var(--gold-b);}
+h3{font-size:19px;margin:1.5em 0 .4em;}
+p,li{color:#DCD8CE;}
+ul,ol{padding-left:22px;}
+li{margin:.4em 0;}
+.lead{font-size:19px;color:var(--dim);}
+.card{background:var(--surface);border:1px solid var(--line);
+border-radius:16px;padding:22px 24px;margin:18px 0;}
+.card h3{margin-top:0;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;}
+.btn{display:inline-block;background:var(--gold);color:#000;font-weight:700;
+padding:13px 28px;border-radius:40px;text-decoration:none;margin-top:8px;}
+.meta{color:#7C7C85;font-size:14px;margin-bottom:22px;}
+footer{border-top:1px solid var(--line);margin-top:40px;}
+.foot{max-width:860px;margin:0 auto;padding:26px 20px;color:#7C7C85;font-size:14px;
+display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between;}
+.foot a{color:#9A9AA3;text-decoration:none;margin-right:14px;}
+blockquote{border-left:3px solid var(--gold);margin:1.4em 0;padding:.2em 0 .2em 18px;color:var(--dim);}
+table{width:100%;border-collapse:collapse;margin:1.2em 0;font-size:16px;}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;}
+th{background:var(--surface2);color:var(--gold-b);}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>BF <span>AKIŞ</span></h1>
-  <p>Günlük planlayıcı — Planla · Odaklan · Başar.<br>Görevler, alarmlar, odak modu ve daha fazlası. Tamamen çevrimdışı, verilerin cihazında kalır.</p>
-  <a class="btn" href="https://play.google.com/store/apps/details?id=com.bfakis.app">Google Play'den İndir</a>
-  <a class="link" href="privacy.html">Gizlilik Politikası</a>
+<header><div class="bar">
+  <a class="brand" href="index.html">BF <span>AKIŞ</span></a>
+  <nav><a href="index.html" class="on">Ana Sayfa</a><a href="rehber.html">Kullanım Rehberi</a><a href="blog.html">Yazılar</a><a href="hakkinda.html">Hakkında</a><a href="iletisim.html">İletişim</a></nav>
+</div></header>
+<main>
+
+<h1>Günü planla, odaklan, bitir.</h1>
+<p class="lead">BF Akış; görevlerini saat saat planladığın, alarmla hatırlatıldığın ve
+tamamladıkça ilerlemeni gördüğün bir günlük planlayıcı. Tamamen çevrimdışı çalışır —
+verilerin cihazından çıkmaz.</p>
+
+<a class="btn" href="https://play.google.com/store/apps/details?id=com.bfakis.app">Google Play'den indir</a>
+
+<h2>Neden BF Akış?</h2>
+<p>Yapılacaklar listesi tutan onlarca uygulama var. BF Akış'ı ayıran şey, listeyi
+<strong>güne yaymaya</strong> odaklanması. Bir görevi eklerken sadece "ne" değil "kaçta"
+sorusunu da cevaplıyorsun; uygulama günü bir zaman çizelgesi gibi gösteriyor ve o saat
+geldiğinde seni gerçekten uyarıyor. Böylece liste, bakıp geçtiğin bir yığın olmaktan
+çıkıp günün planına dönüşüyor.</p>
+
+<div class="grid">
+  <div class="card">
+    <h3>Saatli görevler ve tekrar</h3>
+    <p>Görevlerine saat ver, tek seferlik ya da tekrarlı yap: her gün, hafta içi,
+    haftanın belirli günü, ayın belirli günü veya iki haftada bir. Alt görev listesi
+    ekleyip adım adım işaretleyebilirsin.</p>
+  </div>
+  <div class="card">
+    <h3>Gerçek alarm</h3>
+    <p>Sıradan bir bildirim değil: alarm işaretlediğin görevler, uygulama tamamen
+    kapalıyken bile telefonu uyandırıp tam ekran çalar. Beş farklı alarm sesi arasından
+    seçim yapabilir, çaldığında 5–30 dakika erteleyebilirsin.</p>
+  </div>
+  <div class="card">
+    <h3>Odak modu</h3>
+    <p>Pomodoro yöntemiyle çalışan bir zamanlayıcı: 15, 25, 45 veya 60 dakikalık
+    oturumlar, aralarında molalar. Dört oturumun ardından uzun mola gelir; her
+    tamamlanan oturum puan kazandırır.</p>
+  </div>
+  <div class="card">
+    <h3>İstatistik ve seri</h3>
+    <p>Dakiklik oranın, haftalık grafiğin, aylık karşılaştırman ve üst üste aktif gün
+    serin gerçek kullanım verinden hesaplanır. Rozetler ve rütbeler ilerlemeni
+    görünür kılar.</p>
+  </div>
+  <div class="card">
+    <h3>Çevrimdışı ve gizli</h3>
+    <p>Sunucu yok. Hesabın, görevlerin ve istatistiklerin yalnızca cihazında saklanır.
+    İnternet olmadan da her şey çalışır; istersen verilerini JSON olarak yedekler ya da
+    takvimine (.ics) aktarırsın.</p>
+  </div>
+  <div class="card">
+    <h3>Üç dil, yedi tema</h3>
+    <p>Türkçe, İngilizce ve Almanca desteklenir — arayüz, bildirimler ve asistan dahil.
+    Yedi renk teması arasından seçim yapar, açık ve koyu modda kullanabilirsin.</p>
+  </div>
 </div>
+
+<h2>Nasıl çalışır?</h2>
+<p>Uygulamayı ilk açtığında bir hesap oluşturursun — bu hesap yalnızca cihazında
+tutulur, kayıt için e-posta ya da telefon istenmez. Ardından günün görevlerini
+eklemeye başlarsın. Ana ekran, günü saat sırasına göre dizilmiş bir liste olarak
+gösterir; sıradaki görev vurgulanır, tamamladıkça üstteki ilerleme çubuğu dolar.</p>
+<p>Ayrıntılı anlatım için <a href="rehber.html">kullanım rehberine</a> göz atabilirsin.</p>
+
+<h2>Son yazılar</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="gunluk-planlama.html">Günlük planlama neden işe yarar?</a></h3>
+    <p>Planlamanın zihinsel yükü nasıl azalttığını ve iyi bir günlük planın hangi
+    özelliklere sahip olması gerektiğini anlatıyoruz.</p>
+  </div>
+  <div class="card">
+    <h3><a href="pomodoro.html">Pomodoro tekniği: 25 dakikanın gücü</a></h3>
+    <p>Yöntemin nereden geldiği, neden işe yaradığı ve kimlerde işe yaramadığı
+    üzerine dengeli bir bakış.</p>
+  </div>
+  <div class="card">
+    <h3><a href="aliskanlik.html">Alışkanlık kurmanın anatomisi</a></h3>
+    <p>Bir davranışın alışkanlığa dönüşmesi için gereken üç parça ve serinin
+    motivasyondaki rolü.</p>
+  </div>
+</div>
+
+</main>
+<footer><div class="foot">
+  <div>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="rehber.html">Rehber</a>
+    <a href="blog.html">Yazılar</a>
+    <a href="hakkinda.html">Hakkında</a>
+    <a href="iletisim.html">İletişim</a>
+    <a href="privacy.html">Gizlilik Politikası</a>
+  </div>
+  <div>© 2026 BF Akış</div>
+</div></footer>
 </body>
 </html>
